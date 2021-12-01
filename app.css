@@ -1,0 +1,134 @@
+/* värvid */
+
+.dark-gold {
+    color: #8E793E}
+.light-gold {
+    color: #AD974F}
+.intellectual-grey {
+    background-color: #231F20}
+.light-grey {
+    background-color: #EAEAEA}
+
+    /* värvid */
+
+    /*  Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { ... }
+    
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { ... }
+    
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { ... }
+    
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { ... } */
+
+
+.main img{
+    max-width:  450px;
+    max-height: 450px;
+    
+}
+
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color:white;
+}
+
+div.main-img, p{
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    
+    flex-direction: row;
+    margin-top: 30px;
+    text-align: center;
+    justify-items: center;
+    
+}
+
+.main p{
+    flex-direction: column;
+    padding-top: 4em;
+
+}
+
+
+#nav-content{
+    margin-left:5px;
+    color: #AD974F;
+    font-size: medium;
+    
+    
+}
+
+#nav-bar{
+    padding:0;
+    border-bottom: 2px solid #AD974F;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    background-color: #231F20;
+
+} 
+
+#nav-content:hover{
+    color: #8E793E;
+    cursor: pointer;
+}
+
+
+
+.main span.camera-icon-text{
+    color: #8E793E;
+    padding-bottom: 1em;
+
+}
+
+/* mobile view */
+
+@media(max-width:576px)
+{
+
+#insta-logo{
+    width: 30px;
+    height: 30px;
+}
+
+.arx{
+    display: none;;
+}
+
+#nav-content{
+    margin: 5px 5px;
+    padding:0;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+div.main-img + p{
+    padding: 10px;
+
+    
+}
+
+.main img{
+    margin: 0;
+    padding: 10px 0;
+}
+
+.main{
+    display: inline;
+}
+
+
+
+
+span.camera-icon-text{
+    display: none;
+}
+
+}
