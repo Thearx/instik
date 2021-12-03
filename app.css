@@ -7,9 +7,9 @@
 .intellectual-grey {
     background-color: #231F20}
 .light-grey {
-    background-color: #EAEAEA}
+    background-color: #3a3335}
 
-    /* värvid */
+ /* värvid */
 
     /*  Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) { ... }
@@ -23,9 +23,14 @@
     // Extra large devices (large desktops, 1200px and up)
     @media (min-width: 1200px) { ... } */
 
+body {
+    color: white;
+    font-family: roboto, sans-serif;
+    font-weight: 100
+}
 
 .main img{
-    max-width:  450px;
+    max-width:  auto;
     max-height: 450px;
     
 }
@@ -35,23 +40,26 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     color:white;
+    margin-top: 3em;
+    margin-bottom: 5rem;
 }
 
 div.main-img, p{
     display: flex;
     padding: 1em;
+    padding-left: 0;
     justify-content: center;
-    
     flex-direction: row;
-    margin-top: 30px;
     text-align: center;
     justify-items: center;
     
 }
 
+
 .main p{
     flex-direction: column;
-    padding-top: 4em;
+    font-weight: 100;
+
 
 }
 
@@ -60,17 +68,20 @@ div.main-img, p{
     margin-left:5px;
     color: #AD974F;
     font-size: medium;
+    font-weight: 100;
     
     
 }
 
 #nav-bar{
+    position: fixed;
     padding:0;
-    border-bottom: 2px solid #AD974F;
+    border-bottom: solid 2px;
+    border-color: #AD974F;
     position: fixed; 
     top: 0; 
     width: 100%;
-    background-color: #231F20;
+    ;
 
 } 
 
@@ -87,10 +98,43 @@ div.main-img, p{
 
 }
 
-/* mobile view */
+div.footer{
+  
+    color: #AD974F;
+    font-weight: 100;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+
+    padding:0;
+    margin-left: 0;
+
+}
+
+
+
+div.footer p{
+    padding:0;
+    margin: 1em;
+    margin-left: 5px;    
+}
+
+div.footer a{
+    text-decoration: none;
+    color: #AD974F
+}
+
+div.footer a:hover{
+    cursor: pointer;
+}
+
+
+/* --- mobile view --- */
 
 @media(max-width:576px)
 {
+
+
 
 #insta-logo{
     width: 30px;
@@ -109,26 +153,65 @@ div.main-img, p{
     
 }
 
-div.main-img + p{
-    padding: 10px;
+body div.main-img {
+    padding:0;
+    margin:0;
+}
 
-    
+body .main p{
+    margin:2rem;
+    padding: 0;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .main img{
     margin: 0;
-    padding: 10px 0;
+    padding: 0;
 }
 
 .main{
     display: inline;
 }
 
-
-
-
 span.camera-icon-text{
     display: none;
+}
+
+.main img{
+    max-width:  auto;
+    max-height: 576px;
+
+}
+
+div.footer{
+    border:none;
+}
+
+/* Esimene border (default) */
+
+div.main p{
+    border-left: solid 2px #AD974F;
+    text-align: start;
+}
+
+/* Teine border (default) */
+
+div.main p.dif-border-1{
+background-color: #3a3335;
+}
+
+/* kolmas border */
+
+div.main p.dif-border-2{
+    border: solid 2px #AD974F;
+    border-radius: 10px;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      #AD974F, 
+      #231F20
+    ) 1 100%;
 }
 
 }
